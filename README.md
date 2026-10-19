@@ -3,6 +3,10 @@
 Painel lateral para o [Claude Code](https://claude.com/claude-code). Abre ao lado da conversa e junta, numa coluna só, o que você costuma consultar fora dela:
 
 ```
+▾ SESSÕES ───────────────────── 30 recentes
+  filtrar…
+  revise a pr 761 do smartcloud  19/10 16:49
+
 ▾ JIRA ────────── CAT-4411 · ● EM ANDAMENTO
   CAT-4411                        Subtarefa
   Atualização nos contextos de ProdutosRevisao
@@ -25,20 +29,16 @@ Painel lateral para o [Claude Code](https://claude.com/claude-code). Abre ao lad
 ▾ GIT ───────────────── 1 para mim · 3 meus
   ▾ PARA MIM                           1 PR
   ▸ MEUS PRS                           3 PR
-
-▾ SESSÕES ───────────────────── 30 recentes
-  filtrar…
-  revise a pr 761 do smartcloud  19/10 16:49
 ```
 
 ## Seções
 
 | Seção | O que mostra | Precisa de |
 |---|---|---|
+| **Sessões** | As sessões recentes do projeto, com filtro. Clique para retomar. | nada |
 | **Jira** | O card citado no prompt (`CAT-1234`) ou no nome da branch: status, responsável, prioridade, critérios de aceite. Muda o status com confirmação. | Conector **Atlassian Rovo** do claude.ai ligado no Claude Code |
 | **Agents** | Árvore dos subagents da sessão, com o que cada um está fazendo e há quanto tempo. | nada |
 | **Git** | PRs que pedem sua revisão e os seus PRs abertos, com aprovações, CI e comentários. Botão para revisar com o Claude. | [GitHub CLI](https://cli.github.com) (`gh`) logado |
-| **Sessões** | As sessões recentes do projeto, com filtro. Clique para retomar. | nada |
 
 Cada seção é independente: se uma falhar, só ela mostra `✗ erro` e as outras continuam funcionando. Clique no cabeçalho de uma seção para minimizar.
 
