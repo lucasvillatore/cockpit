@@ -1,0 +1,1 @@
+{ "name": "painel", "version": "0.1.0", "description": "Cockpit: painel lateral do Claude Code com Jira, Agents, Git e Sessões", "types": "./types/index.d.ts" }
