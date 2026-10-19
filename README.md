@@ -96,6 +96,17 @@ Para deixar sempre ativo, adicione a variável `CLAUDE_CODE_PLUGIN_DIRS` no `env
 
 Se o arquivo já tiver um bloco `env`, só acrescente a linha nele. Se já houver outras pastas na variável, separe com `:` no macOS e Linux e com `;` no Windows.
 
+No macOS, acrescente também `CLAUDE_CODE_NO_FLICKER` no mesmo `env`. O painel só fica à direita no layout de tela cheia do terminal; sem essa variável ele abre abaixo do chat.
+
+```json
+{
+  "env": {
+    "CLAUDE_CODE_PLUGIN_DIRS": "~/.claude/mods/cockpit",
+    "CLAUDE_CODE_NO_FLICKER": "1"
+  }
+}
+```
+
 ### 3. Usar
 
 Abra o Claude Code. O painel abre sozinho em modo interativo. Para reabrir: `/painel`.

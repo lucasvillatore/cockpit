@@ -29,6 +29,9 @@ export async function safe<T>(work: Promise<T>): Promise<Safe<T>> {
 
 export const quiet = (work: Promise<unknown>) => void work.catch(() => undefined)
 
-export function openPanel($: EngineInterface) {
-  return $.ui.open({ id: PANE, title: 'Painel' })
+export async function openPanel($: EngineInterface) {
+  const opened = await $.ui.open({ id: PANE, title: 'Painel' })
+  if (opened.isPlaced) return opened
+  $.ui.toast(`Painel não abriu: ${opened.reason}. Use /painel.`)
+  return opened
 }
